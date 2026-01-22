@@ -70,7 +70,7 @@ These schemas form the foundation for basic interoperability.
 
 ## Usage Guidelines
 
-Engines **SHOULD** implement these schemas exactly to participate fully in the ecosystem. A "Physics Processor" distributed via WOCS will expect `runs:transform` on relevant Records. If your engine uses a different name (e.g., `PositionComponent`), the Processor cannot plug in seamlessly.
+Engines **SHOULD** implement these schemas exactly to participate fully in the ecosystem. A third-party "Physics Processor" will expect `runs:transform` on relevant Records. If your engine uses a different name (e.g., `PositionComponent`), the Processor cannot plug in seamlessly.
 
 Example failure case:  
 An engine renames the schema to `my:position`. A community-built "Orbit Camera Processor" that reads `runs:transform` will silently fail or require forking.
